@@ -84,11 +84,14 @@ export default function SimpleTicTacToe() {
   };
 
   const updateLeaderboard = (winner) => {
-    const newLeaderboard = [
-      ...leaderboard,
-      { id: leaderboard.length + 1, winner },
-    ];
-    setLeaderboard(newLeaderboard);
+    if (winner !== "Draw") {
+      const newLeaderboard = [
+        ...leaderboard,
+        { id: leaderboard.length + 1, winner },
+      ];
+      console.log;
+      setLeaderboard(newLeaderboard);
+    }
   };
 
   const handlePlayerSelection = (player) => {
